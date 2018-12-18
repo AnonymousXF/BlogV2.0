@@ -1,0 +1,12 @@
+nav.sidebar{
+    top: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.about-me{
+    margin-left: -15px;
+    margin-right: 15px;
+    height: 300px;
+    background: #20c997;
+}
