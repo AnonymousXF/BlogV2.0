@@ -13,8 +13,8 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-9" style="background-color: #c82333">
-            Hello World!
+        <div class="col-md-9">
+            <b>Body Content</b>
         </div>
         <div class="col-md-3">
             {% include "sidebar.html" %}
@@ -25,4 +25,5 @@
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
 {% endblock %}
