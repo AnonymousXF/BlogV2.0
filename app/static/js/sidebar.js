@@ -58,7 +58,7 @@ $(document).ready(function () {
     let HSL = getHSLArray(a.length);
     for (let i = 0; i < a.length; i++){
         let RGB = HSL2RGB(HSL[i][0], HSL[i][1], HSL[i][2]);
-        $(a[i]).css("font-size", "14px");
+        $(a[i]).css("font-size", "0.8em");
         $(a[i]).css("margin-left", "15px");
         $(a[i]).css("margin-bottom", "15px");
         //console.log('rgb(' + RGB.toString() + ')');
