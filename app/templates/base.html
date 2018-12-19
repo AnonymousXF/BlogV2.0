@@ -14,7 +14,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
-            <b>Body Content</b>
+            <nav class="navbar navbar-expand-lg navbar-light"style="background-color: rgba(128,189,255,0.3)">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url_for("index.index") }}">
+                        <img src="{{ url_for('static', filename='image/logo.png') }}" width="207" height="57">
+                    </a>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link" style="font-size: 20px">Link1</a></li>
+                        <li class="nav-item"><a class="nav-link" style="font-size: 20px">Link2</a></li>
+                        <li class="nav-item"><a class="nav-link" style="font-size: 20px">Link3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            {% block content %}
+            {% endblock %}
         </div>
         <div class="col-md-3">
             {% include "sidebar.html" %}
