@@ -1,17 +1,51 @@
-nav.sidebar{
-    top: 0;
-    bottom: 0;
-    position: fixed;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ededed;
+}
+
+.sidebar {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.sidebar-content {
+    max-width: 300px;
+    min-width: 300px;
+    height: 100%;
     overflow: auto;
 }
 
 .about-me{
-    margin-left: -15px;
-    margin-right: 15px;
+    border: 2px;
 }
 
 .tag-panel{
     margin-top: 20px;
-    margin-left: -15px;
-    margin-right: 15px;
+    border: 2px;
+}
+
+.main {
+    display: inline-block;
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.main-content{
+    overflow: auto;
+}
+
+@media screen and (max-width: 900px){
+    .sidebar{
+        display: none;
+    }
 }
