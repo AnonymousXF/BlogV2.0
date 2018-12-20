@@ -9,6 +9,7 @@
     width: 100%;
     height: 100vh;
     background-color: #ededed;
+    overflow: auto;
 }
 
 .sidebar {
@@ -21,16 +22,17 @@
     max-width: 300px;
     min-width: 300px;
     height: 100%;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .about-me{
-    border: 2px;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
 .tag-panel{
     margin-top: 20px;
-    border: 2px;
+    margin-right: 10px;
 }
 
 .main {
@@ -41,7 +43,7 @@
 }
 
 .main-content{
-    overflow: auto;
+
 }
 
 @media screen and (max-width: 900px){
