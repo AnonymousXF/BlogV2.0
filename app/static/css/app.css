@@ -1,37 +1,85 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .body {
     display: flex;
     width: 100%;
-    height: 100vh;
-    background-color: #ededed;
+    height: 100%;
     overflow: auto;
+    background-color: #d6d6d6;
 }
-
+/*
+//透明图片背景
+.body::before{
+    content:"";
+    background-image:url(../image/bg.jpg);
+    opacity:0.3;
+    z-index:-1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+*/
 #sidebar {
     position: relative;
     display: inline-block;
     height: 100%;
 }
 
+#main {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#popular{
+    margin-top: 20px;
+    display: block;
+    background-color: #ffffff;
+}
+
+#popular > .popular-article{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#popular > .popular-article > .pre-img{
+    display: inline-block;
+    width: 40%;
+}
+
+#popular > .popular-article > .article{
+    display: inline-block;
+    width: 55%;
+}
+
+#popular > .popular-article > .article > .title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.0vw;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+#popular > .popular-article > .article > .date{
+    font-size: 1.0vw;
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+
 .about-me{
     margin-top: 20px;
+    font-size: 1.0vw;
 }
 
 .tag-panel{
     margin-top: 20px;
+    font-size: 1.0vw;
 }
 
-#main {
-    display: inline-block;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-}
+
 
 .main-content{
     display: flex;
@@ -49,6 +97,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main-content > .content > .latest-list{
+    background-color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
 }
 
 @media screen and (max-width: 900px){
