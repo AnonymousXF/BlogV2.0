@@ -79,8 +79,6 @@
     font-size: 1.0vw;
 }
 
-
-
 .main-content{
     display: flex;
 }
@@ -99,11 +97,20 @@
     justify-content: center;
 }
 
-.main-content > .content > .latest-list{
+.main-content > .content > .latest-list {
     background-color: #ffffff;
     margin-top: 20px;
-    display: flex;
+    display: inline-block;
     width: 100%;
+}
+
+.main-content > .content > .latest-list > .latest-article {
+    display: inline-block;
+    background-color: #6f42c1;
+    width: 49%;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 900px){
