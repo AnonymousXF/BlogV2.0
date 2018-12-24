@@ -2,7 +2,8 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #d6d6d6;
+    overflow: auto;
+    background-color: #f1f1f1;
 }
 
 /*主要内容*/
@@ -34,19 +35,69 @@
 .wrapper .main .main-content .latest-list {
     background-color: #ffffff;
     margin-top: 20px;
-    display: block;
+    display: inline-block;
     width: 100%;
+    border: 1px solid #dddddd;
 }
 
 .wrapper .main .main-content .latest-list .latest-article {
     display: inline-block;
-    background-color: #d6d6d6;
     width: 49%;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
+.wrapper .main .main-content .latest-list .latest-article .pre-img {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .pre-img img {
+    width: 100%;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article {
+    display: inline-block;
+    width: 55%;
+    vertical-align: top;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.0vw;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article .introduce {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    /*white-space: nowrap;*/
+    font-size: 1.0vw;
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article .date {
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article .date .see {
+    font-size: 0.8vw;
+}
+
+.wrapper .main .main-content .latest-list .latest-article .article .date .time {
+    font-size: 1.0vw;
+}
 
 /*侧边栏*/
 .wrapper .sidebar {
@@ -80,6 +131,10 @@
     width: 40%;
 }
 
+.wrapper .sidebar .popular .popular-article .pre-img img {
+    width: 100%;
+}
+
 .wrapper .sidebar .popular .popular-article .article {
     display: inline-block;
     width: 55%;
@@ -94,9 +149,20 @@
 }
 
 .wrapper .sidebar .popular .popular-article .article .date {
-    font-size: 1.0vw;
     font-family: Consolas;
     color: #9d9d9d;
+}
+
+.wrapper .sidebar .popular .popular-article .article .date .see{
+    display: inline-block;
+    width: 40%;
+    font-size: 0.9vw;
+}
+
+.wrapper .sidebar .popular .popular-article .article .date .time{
+    display: inline-block;
+    width: 55%;
+    font-size: 1.0vw;
 }
 
 
