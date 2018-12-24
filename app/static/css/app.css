@@ -1,61 +1,91 @@
-.body {
+.wrapper {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: #d6d6d6;
 }
-/*
-//透明图片背景
-.body::before{
-    content:"";
-    background-image:url(../image/bg.jpg);
-    opacity:0.3;
-    z-index:-1;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-*/
-#sidebar {
-    position: relative;
-    display: inline-block;
-    height: 100%;
-}
 
-#main {
+/*主要内容*/
+.wrapper .main {
     display: inline-block;
-    width: 100%;
+    width: 75%;
     height: 100%;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-#popular{
+.wrapper .main .main-content {
+    display: inline-block;
+    width: 100%;
+}
+
+.wrapper .main .main-content .slideshow {
+    margin-top: 20px;
+    width: 100%;
+    height: 40%;
+    color: #ffffff;
+    font-size: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.wrapper .main .main-content .latest-list {
+    background-color: #ffffff;
     margin-top: 20px;
     display: block;
+    width: 100%;
+}
+
+.wrapper .main .main-content .latest-list .latest-article {
+    display: inline-block;
+    background-color: #d6d6d6;
+    width: 49%;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+
+/*侧边栏*/
+.wrapper .sidebar {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+
+.wrapper .sidebar .about-site {
+    font-size: 1.0vw;
+    margin-top: 20px;
+}
+
+.wrapper .sidebar .tag-panel {
+    font-size: 1.0vw;
+    margin-top: 20px;
+}
+
+.wrapper .sidebar .popular {
+    margin-top: 20px;
     background-color: #ffffff;
 }
 
-#popular > .popular-article{
+.wrapper .sidebar .popular .popular-article {
     margin-left: 3%;
     margin-right: 3%;
 }
 
-#popular > .popular-article > .pre-img{
+.wrapper .sidebar .popular .popular-article .pre-img {
     display: inline-block;
     width: 40%;
 }
 
-#popular > .popular-article > .article{
+.wrapper .sidebar .popular .popular-article .article {
     display: inline-block;
     width: 55%;
 }
 
-#popular > .popular-article > .article > .title{
+.wrapper .sidebar .popular .popular-article .article .title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -63,58 +93,22 @@
     font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
 }
 
-#popular > .popular-article > .article > .date{
+.wrapper .sidebar .popular .popular-article .article .date {
     font-size: 1.0vw;
     font-family: Consolas;
     color: #9d9d9d;
 }
 
-.about-me{
-    margin-top: 20px;
-    font-size: 1.0vw;
-}
-
-.tag-panel{
-    margin-top: 20px;
-    font-size: 1.0vw;
-}
-
-.main-content{
-    display: flex;
-}
-
-.main-content > .content{
-    width: 100%;
-}
-
-.main-content > .content > .slideshow{
-    margin-top: 20px;
-    height: 40%;
-    color: #ffffff;
-    font-size: 3.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-content > .content > .latest-list {
-    background-color: #ffffff;
-    margin-top: 20px;
-    display: inline-block;
-    width: 100%;
-}
-
-.main-content > .content > .latest-list > .latest-article {
-    display: inline-block;
-    background-color: #6f42c1;
-    width: 49%;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
 
 @media screen and (max-width: 900px){
-    #sidebar{
+    .wrapper .sidebar{
         display: none;
+    }
+    .wrapper .main {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
