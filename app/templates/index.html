@@ -1,23 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="content">
-        <div class="slideshow" style="background: url({{ url_for('static', filename='image/header-bg.jpg') }}) center center no-repeat;background-size: cover">
-            Demo Slideshow.
+    <div class="slideshow" style="background: url({{ url_for('static', filename='image/header-bg.jpg') }}) center center no-repeat;background-size: cover">
+        Demo Slideshow.
+    </div>
+    <div class="latest-list">
+        <div class="latest-article">
+            Article.<br>This is a tempt frame.
         </div>
-        <div class="latest-list">
-            <div class="latest-article">
-                Article.<br>This is a tempt frame.
-            </div>
-            <div class="latest-article">
-                Article.<br>This is a tempt frame.
-            </div>
-            <div class="latest-article">
-                Article.<br>This is a tempt frame.
-            </div>
-            <div class="latest-article">
-                Article.<br>This is a tempt frame.
-            </div>
+        <div class="latest-article">
+            Article.<br>This is a tempt frame.
+        </div>
+        <div class="latest-article">
+            Article.<br>This is a tempt frame.
+        </div>
+        <div class="latest-article">
+            Article.<br>This is a tempt frame.
         </div>
     </div>
 {% endblock %}
