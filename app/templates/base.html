@@ -13,27 +13,32 @@
 {% endblock %}
 
 <body>
-    <div class="wrapper">
-        <div class="main">
-            <nav class="navbar" style="background-color: rgba(106,110,113,0.2);margin-top: 20px">
-                <a class="navbar-brand" href="{{ url_for("index.index") }}">
-                    <img src="{{ url_for('static', filename='image/logo.png') }}" width="207" height="57" alt="">
-                </a>
-                <ul class="nav justify-content-end">
-                    <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link1</a></li>
-                    <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link2</a></li>
-                    <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link3</a></li>
-                </ul>
-            </nav>
-            <div class="main-content">
+    <header>
+        <nav class="navbar" style="background-color: rgba(106,110,113,0.2)">
+            <a class="navbar-brand" href="{{ url_for("index.index") }}">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" width="207" height="57" alt="">
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link1</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link2</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 1.2em">Link3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="blog-body">
+        <div class="left"></div>
+        <div class="center">
+            <div class="content">
                 {% block content %}
                 {% endblock %}
             </div>
+            <div class="sidebar">
+                {% include "sidebar.html" %}
+            </div>
         </div>
-        <div class="sidebar">
-            {% include "sidebar.html" %}
-        </div>
+        <div class="right"></div>
     </div>
+    <footer style="background-color: #80bdff">Footer</footer>
 </body>
 
 {% block scripts %}
