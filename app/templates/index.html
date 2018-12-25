@@ -1,135 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="slideshow" style="background: url({{ url_for('static', filename='image/header-bg.jpg') }}) center center no-repeat;background-size: cover">
-        Demo Slideshow.
-    </div>
-    <div class="latest-list">
-        <div class="latest-article">
-            <div class="pre-img">
-                <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
-            </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
-            </div>
+    <div class="index">
+        <div class="slideshow" style="background: url({{ url_for('static', filename='image/header-bg.jpg') }}) center center no-repeat;background-size: cover">
+            Demo Slideshow.
         </div>
         <div class="latest-article">
             <div class="pre-img">
                 <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
             </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
+            <div class="article" style="background-color: #20c997">
+                Article
             </div>
         </div>
         <div class="latest-article">
-            <div class="pre-img">
-                <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
-            </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
-            </div>
+            Article
         </div>
         <div class="latest-article">
-            <div class="pre-img">
-                <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
-            </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
-            </div>
+            Article
         </div>
         <div class="latest-article">
-            <div class="pre-img">
-                <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
-            </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
-            </div>
+            Article
         </div>
         <div class="latest-article">
-            <div class="pre-img">
-                <img src="{{ url_for('static', filename='image/pre-img1.jpg') }}" alt="Pre-img">
-            </div>
-            <div class="article">
-                <div class="title">
-                    <b>Python多线程编程</b>
-                </div>
-                <div class="introduce">
-                    <b>简介：</b>Python多线程编程简介。这是一条特别长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的简介。
-                </div>
-                <div class="date">
-                    <div class="time">
-                        2018/12/24
-                    </div>
-                    <div class="see">
-                        <i class="fa fa-eye">12</i>
-                    </div>
-                </div>
-            </div>
+            Article
+        </div>
+        <div class="latest-article">
+            Article
         </div>
     </div>
 {% endblock %}
