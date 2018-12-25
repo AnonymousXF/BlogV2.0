@@ -1,27 +1,107 @@
-.wrapper {
+/*************************************/
+/* 上中下三层布局，中间为主要内容，自适应 */
+/*************************************/
+body {
     display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    flex-direction: column;
+    height: 100vh;
+}
+.blog-body {
+    display: flex;
+    flex: 1 0 auto;
     background-color: #f1f1f1;
 }
 
-/*主要内容*/
-.wrapper .main {
+/***************************************/
+/* 中间层三栏布局，左右栏留空，中间栏自适应 */
+/***************************************/
+.blog-body .center {
+    display: flex;
+    flex: 1;
+}
+.blog-body .left {
+    width: 10%;
+}
+.blog-body .right {
+    width: 10%;
+}
+
+/******************************/
+/* 中间栏分为侧边栏和主体内容区域 */
+/******************************/
+/********* 侧边栏 **************/
+/******************************/
+.blog-body .center .sidebar {
+    width: 30%;
+}
+.blog-body .center .sidebar .about-site {
+    font-size: 1.0vw;
+    margin-top: 20px;
+}
+.blog-body .center .sidebar .tag-panel {
+    font-size: 1.0vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blog-body .center .sidebar .popular {
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+.blog-body .center .sidebar .popular .popular-article {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.blog-body .center .sidebar .popular .popular-article .pre-img {
     display: inline-block;
-    width: 75%;
-    height: 100%;
+    width: 40%;
+}
+.blog-body .center .sidebar .popular .popular-article .pre-img img {
+    width: 100%;
+}
+.blog-body .center .sidebar .popular .popular-article .article {
+    display: inline-block;
+    width: 55%;
+}
+.blog-body .center .sidebar .popular .popular-article .article .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.0vw;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+.blog-body .center .sidebar .popular .popular-article .article .bottom {
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+.blog-body .center .sidebar .popular .popular-article .article .bottom .see {
+    display: inline-block;
+    width: 40%;
+    font-size: 0.9vw;
+}
+.blog-body .center .sidebar .popular .popular-article .article .bottom .date {
+    display: inline-block;
+    width: 55%;
+    font-size: 1.0vw;
+}
+
+/******************************/
+/* 中间栏分为侧边栏和主体内容区域 */
+/******************************/
+/********** 主体内容 ***********/
+/******************************/
+.blog-body .center .content {
+    width: 70%;
     margin-left: 15px;
     margin-right: 15px;
 }
-
-.wrapper .main .main-content {
+/* 主页样式 */
+.blog-body .center .index {
     display: inline-block;
     width: 100%;
 }
-
-.wrapper .main .main-content .slideshow {
+.blog-body .center .index .slideshow {
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     height: 40%;
     color: #ffffff;
@@ -30,151 +110,55 @@
     align-items: center;
     justify-content: center;
     text-align: justify;
+    border-radius: 10px;
 }
-
-.wrapper .main .main-content .latest-list {
+.blog-body .center .index .latest-article {
+    margin-bottom: 20px;
+    height: 200px;
     background-color: #ffffff;
-    margin-top: 20px;
-    display: inline-block;
-    width: 100%;
     border: 1px solid #dddddd;
 }
-
-.wrapper .main .main-content .latest-list .latest-article {
-    display: inline-block;
-    width: 49%;
-    margin-left: 8px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .pre-img {
+.blog-body .center .index .latest-article .pre-img {
     display: inline-block;
     width: 40%;
-    vertical-align: top;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .pre-img img {
-    width: 100%;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article {
-    display: inline-block;
-    width: 55%;
-    vertical-align: top;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article .title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 1.0vw;
-    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article .introduce {
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-
-    /*white-space: nowrap;*/
-    font-size: 1.0vw;
-    font-family: Consolas;
-    color: #9d9d9d;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article .date {
-    font-family: Consolas;
-    color: #9d9d9d;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article .date .see {
-    font-size: 0.8vw;
-}
-
-.wrapper .main .main-content .latest-list .latest-article .article .date .time {
-    font-size: 1.0vw;
-}
-
-/*侧边栏*/
-.wrapper .sidebar {
-    display: inline-block;
-    width: 25%;
     height: 100%;
+    margin-left: 15px;
+    vertical-align: top;
 }
-
-.wrapper .sidebar .about-site {
-    font-size: 1.0vw;
-    margin-top: 20px;
-}
-
-.wrapper .sidebar .tag-panel {
-    font-size: 1.0vw;
-    margin-top: 20px;
-}
-
-.wrapper .sidebar .popular {
-    margin-top: 20px;
-    background-color: #ffffff;
-}
-
-.wrapper .sidebar .popular .popular-article {
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-.wrapper .sidebar .popular .popular-article .pre-img {
-    display: inline-block;
-    width: 40%;
-}
-
-.wrapper .sidebar .popular .popular-article .pre-img img {
+.blog-body .center .index .latest-article .pre-img img {
     width: 100%;
 }
-
-.wrapper .sidebar .popular .popular-article .article {
+.blog-body .center .index .latest-article .article {
     display: inline-block;
     width: 55%;
-}
-
-.wrapper .sidebar .popular .popular-article .article .title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 1.0vw;
-    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-}
-
-.wrapper .sidebar .popular .popular-article .article .date {
-    font-family: Consolas;
-    color: #9d9d9d;
-}
-
-.wrapper .sidebar .popular .popular-article .article .date .see{
-    display: inline-block;
-    width: 40%;
-    font-size: 0.9vw;
-}
-
-.wrapper .sidebar .popular .popular-article .article .date .time{
-    display: inline-block;
-    width: 55%;
-    font-size: 1.0vw;
+    height: 100%;
+    margin-left: 10px;
+    vertical-align: top;
 }
 
 
-@media screen and (max-width: 900px){
-    .wrapper .sidebar{
+/***********************/
+/* 适应不同大小的屏幕样式 */
+/***********************/
+@media screen and (max-width: 1000px) {
+    .blog-body .left {
         display: none;
     }
-    .wrapper .main {
-        display: inline-block;
+    .blog-body .right {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .blog-body .left {
+        display: none;
+    }
+    .blog-body .right {
+        display: none;
+    }
+    .blog-body .center .content {
         width: 100%;
-        height: 100%;
-        margin-left: 15px;
-        margin-right: 15px;
+    }
+    .blog-body .center .sidebar {
+        display: none;
     }
 }
