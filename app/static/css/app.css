@@ -116,24 +116,60 @@ body {
     margin-bottom: 20px;
     height: 200px;
     background-color: #ffffff;
-    border: 1px solid #dddddd;
 }
 .blog-body .center .index .latest-article .pre-img {
     display: inline-block;
     width: 40%;
     height: 100%;
-    margin-left: 15px;
+    margin-left: 1%;
+    margin-top: 1%;
     vertical-align: top;
 }
 .blog-body .center .index .latest-article .pre-img img {
     width: 100%;
+    border-radius: 10px;
 }
 .blog-body .center .index .latest-article .article {
     display: inline-block;
     width: 55%;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 1%;
+    margin-top: 1%;
     vertical-align: top;
+}
+.blog-body .center .index .latest-article .article .title {
+    height: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.0vw;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+.blog-body .center .index .latest-article .article .introduce {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 1.0vw;
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+.blog-body .center .index .latest-article .article .bottom {
+    height: 10%;
+    margin-top: 2%;
+    font-family: Consolas;
+    color: #9d9d9d;
+}
+.blog-body .center .index .latest-article .article .bottom .see {
+    font-size: 0.8vw;
+    display: inline-block;
+    width: 15%;
+}
+.blog-body .center .index .latest-article .article .bottom .date {
+    font-size: 1.0vw;
+    display: inline-block;
+    width: 35%;
 }
 
 
