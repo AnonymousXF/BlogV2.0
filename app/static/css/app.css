@@ -54,6 +54,7 @@ body {
 .blog-body .center .sidebar .popular .popular-article .pre-img {
     display: inline-block;
     width: 40%;
+    vertical-align: top;
 }
 .blog-body .center .sidebar .popular .popular-article .pre-img img {
     width: 100%;
@@ -61,6 +62,7 @@ body {
 .blog-body .center .sidebar .popular .popular-article .article {
     display: inline-block;
     width: 55%;
+    vertical-align: top;
 }
 .blog-body .center .sidebar .popular .popular-article .article .title {
     white-space: nowrap;
