@@ -33,13 +33,8 @@
     <div class="blog-body">
         <div class="left"></div>
         <div class="center">
-            <div class="content">
-                {% block content %}
-                {% endblock %}
-            </div>
-            <div class="sidebar">
-                {% include "sidebar.html" %}
-            </div>
+            {% block content %}
+            {% endblock %}
         </div>
         <div class="right"></div>
     </div>
